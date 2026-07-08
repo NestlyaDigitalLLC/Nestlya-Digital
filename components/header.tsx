@@ -1,7 +1,21 @@
+"use client";
+
 import Link from "next/link";
-import { ChevronDown, ArrowRight } from "lucide-react";
+import { ArrowRight } from "lucide-react";
+import { usePathname } from "next/navigation";
 
 export default function Header() {
+  const pathname = usePathname();
+
+const navLinks = [
+  { name: "Home", href: "/" },
+  { name: "About", href: "/about" },
+  { name: "Services", href: "/services" },
+  { name: "Case Studies", href: "/case-studies" },
+  { name: "Pricing", href: "/pricing" },
+  { name: "Contact", href: "/contact" },
+];
+
   return (
     <header className="sticky top-0 z-50 border-b border-slate-200/60 bg-white/95 backdrop-blur-xl">
       <div className="mx-auto flex h-[80px] max-w-7xl items-center justify-between px-6">
@@ -15,50 +29,27 @@ export default function Header() {
 
         {/* Navigation */}
         <nav className="hidden items-center gap-12 md:flex">
-          <Link
-            href="/"
-            className="relative text-base font-semibold text-slate-950"
-          >
-            Home
+          {navLinks.map((link) => {
+            const isActive = pathname === link.href;
 
-            <span className="absolute -bottom-4 left-0 h-[2px] w-full rounded-full bg-lime-500" />
-          </Link>
+            return (
+              <Link
+                key={link.href}
+                href={link.href}
+                className={`relative text-base transition ${
+                  isActive
+                    ? "font-semibold text-slate-950"
+                    : "font-medium text-slate-600 hover:text-slate-950"
+                }`}
+              >
+                {link.name}
 
-          <Link
-            href="/about"
-            className="text-base font-medium text-slate-600 transition hover:text-slate-950"
-          >
-            About
-          </Link>
-
-          <Link
-            href="/services"
-            className="flex items-center gap-1 text-base font-medium text-slate-600 transition hover:text-slate-950"
-          >
-            Services
-            <ChevronDown size={16} />
-          </Link>
-
-          <Link
-            href="/case-studies"
-            className="text-base font-medium text-slate-600 transition hover:text-slate-950"
-          >
-            Case Studies
-          </Link>
-
-          <Link
-            href="/pricing"
-            className="text-base font-medium text-slate-600 transition hover:text-slate-950"
-          >
-            Pricing
-          </Link>
-
-          <Link
-            href="/contact"
-            className="text-base font-medium text-slate-600 transition hover:text-slate-950"
-          >
-            Contact
-          </Link>
+                {isActive && (
+                  <span className="absolute -bottom-4 left-0 h-[2px] w-full rounded-full bg-lime-500" />
+                )}
+              </Link>
+            );
+          })}
         </nav>
 
         {/* CTA */}

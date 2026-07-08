@@ -61,7 +61,7 @@ export default function Footer() {
 
                   <li>
                     <Link
-                      href="/projects"
+                      href="/case-studies"
                       className="transition hover:text-white"
                     >
                       Case Studies
@@ -85,13 +85,37 @@ export default function Footer() {
                   Services
                 </h4>
 
-                <ul className="space-y-4 text-slate-400">
-                  <li>Web Design</li>
-                  <li>Web Development</li>
-                  <li>E-Commerce</li>
-                  <li>SEO</li>
-                  <li>Digital Marketing</li>
-                </ul>
+<ul className="space-y-4 text-slate-400">
+  <li>
+    <Link href="/services" className="transition hover:text-white">
+      Web Design
+    </Link>
+  </li>
+
+  <li>
+    <Link href="/services" className="transition hover:text-white">
+      Web Development
+    </Link>
+  </li>
+
+  <li>
+    <Link href="/services" className="transition hover:text-white">
+      E-Commerce
+    </Link>
+  </li>
+
+  <li>
+    <Link href="/services" className="transition hover:text-white">
+      SEO
+    </Link>
+  </li>
+
+  <li>
+    <Link href="/services" className="transition hover:text-white">
+      Digital Marketing
+    </Link>
+  </li>
+</ul>
               </div>
 
               {/* Company */}
@@ -119,23 +143,7 @@ export default function Footer() {
                     </Link>
                   </li>
 
-                  <li>
-                    <Link
-                      href="/blog"
-                      className="transition hover:text-white"
-                    >
-                      Blog
-                    </Link>
-                  </li>
 
-                  <li>
-                    <Link
-                      href="/careers"
-                      className="transition hover:text-white"
-                    >
-                      Careers
-                    </Link>
-                  </li>
                 </ul>
               </div>
 

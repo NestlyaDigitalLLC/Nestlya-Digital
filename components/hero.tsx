@@ -49,28 +49,36 @@ export default function Hero() {
             </a>
           </div>
 
-          {/* Trust Block */}
-          <div className="mt-8 flex items-center gap-4">
-            <div className="flex -space-x-3">
-              <div className="h-10 w-10 rounded-full border-2 border-white bg-slate-300" />
-              <div className="h-10 w-10 rounded-full border-2 border-white bg-slate-400" />
-              <div className="h-10 w-10 rounded-full border-2 border-white bg-slate-500" />
-            </div>
+ {/* Trust Block */}
+<div className="mt-10">
+  <p className="mb-4 text-sm font-semibold uppercase tracking-wider text-slate-500">
+    Trusted By Growing Brands
+  </p>
 
-            <div>
-              <p className="font-semibold text-slate-900">
-                Trusted by businesses
-              </p>
+  <div className="flex flex-wrap gap-3">
+    {[
+      "Bankai Agency",
+      "Explore Indonesia",
+      "Epicurious Social",
+    ].map((brand) => (
+      <div
+        key={brand}
+        className="rounded-full border border-slate-200 bg-white px-4 py-2 text-sm font-semibold text-slate-700 shadow-sm"
+      >
+        {brand}
+      </div>
+    ))}
+  </div>
 
-              <p className="text-sm text-slate-500">
-                Modern digital solutions that scale.
-              </p>
-            </div>
-          </div>
-        </div>
+  <p className="mt-4 text-sm text-slate-500">
+    Helping businesses create stronger digital experiences.
+  </p>
+</div>
 
-        {/* Right Visual */}
-        <div className="relative flex items-center justify-center">
+</div>
+
+{/* Right Visual */}
+<div className="relative flex items-center justify-center">
           {/* Circular Rings */}
           <div className="absolute h-[420px] w-[420px] rounded-full border border-lime-100/50" />
 

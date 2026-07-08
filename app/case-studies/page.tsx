@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import {
   ArrowRight,
@@ -11,28 +12,37 @@ import CTASection from "@/components/cta";
 
 const projects = [
   {
-    title: "Ella's Home Organizing",
-    category: "Home Organization Business",
+    title: "Bankai Agency",
+    slug: "/case-studies/bankai-agency",
+    category: "Web Design",
+    image:
+      "https://xocwycgjxoumhacazbft.supabase.co/storage/v1/object/public/settings/New%20Project%20-%202026-07-08T193729.763%20(1).webp",
     description:
-      "Designed and developed a modern website focused on local visibility, trust building and lead generation.",
-    services: ["Web Design", "Local SEO", "Conversion Optimization"],
-    result: "+145% Engagement",
+      "Designed a premium agency website focused on modern UI/UX, branding and conversion-driven user experiences.",
+    services: ["Web Design", "UI/UX Design", "Brand Identity"],
+    result: "Premium Agency Experience",
   },
   {
-    title: "Baby Nest",
-    category: "Educational E-Commerce Brand",
+    title: "Explore Indonesia",
+    slug: "/case-studies/explore-indonesia",
+    category: "Travel & Tourism Website",
+    image:
+      "https://xocwycgjxoumhacazbft.supabase.co/storage/v1/object/public/settings/New%20Project%20-%202026-07-08T194257.250%20(1).webp",
     description:
-      "Built a high-converting e-commerce experience optimized for parents and educational product buyers.",
-    services: ["E-Commerce", "Landing Pages", "Meta Ads"],
-    result: "+63% More Leads",
+      "Built a visually engaging travel platform showcasing destinations, luxury experiences and seamless booking journeys.",
+    services: ["Web Design", "Tourism Website", "UX Strategy"],
+    result: "Enhanced User Engagement",
   },
   {
-    title: "Code Babbage CRM",
-    category: "Business Software Platform",
+    title: "Epicurious Social",
+    slug: "/case-studies/epicurious-social",
+    category: "Social Media Marketing",
+    image:
+      "https://xocwycgjxoumhacazbft.supabase.co/storage/v1/object/public/settings/Design%20dylan%20(1).webp",
     description:
-      "Created a modern SaaS dashboard experience with invoicing, CRM and workflow management features.",
-    services: ["CRM System", "Dashboard UI", "Web App"],
-    result: "Improved Efficiency",
+      "Created a modern marketing-focused website designed to strengthen brand visibility and audience engagement.",
+    services: ["Marketing Website", "Brand Strategy", "Content Design"],
+    result: "Stronger Brand Presence",
   },
 ];
 
@@ -80,11 +90,14 @@ export default function CaseStudiesPage() {
                 key={project.title}
                 className="overflow-hidden rounded-[32px] border border-slate-200 bg-white transition-all duration-300 hover:-translate-y-2 hover:shadow-xl"
               >
-                {/* Placeholder Image */}
-                <div className="flex h-56 items-center justify-center bg-gradient-to-br from-slate-900 to-slate-700">
-                  <span className="text-lg font-semibold text-white">
-                    Project Preview
-                  </span>
+                <div className="relative h-56 overflow-hidden">
+                  <Image
+                    src={project.image}
+                    alt={project.title}
+                    fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1280px) 50vw, 33vw"
+                    className="object-cover transition duration-500 hover:scale-105"
+                  />
                 </div>
 
                 <div className="p-8">
@@ -118,7 +131,7 @@ export default function CaseStudiesPage() {
                   </div>
 
                   <Link
-                    href="/contact"
+                    href={project.slug}
                     className="inline-flex items-center gap-2 font-semibold text-slate-950"
                   >
                     View Project

@@ -46,7 +46,7 @@ export default function CTASection() {
                 href="mailto:hello@nestlya.com"
                 className="mt-1 font-semibold text-lime-400"
               >
-                hello@nestlya.com
+                hello@nestlyadigital.com
               </a>
             </div>
           </div>

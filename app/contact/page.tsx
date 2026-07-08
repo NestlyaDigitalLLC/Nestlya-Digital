@@ -147,7 +147,7 @@ export default function ContactPage() {
                     <Mail className="text-lime-400" />
                     <div>
                       <p className="text-sm text-slate-400">Email</p>
-                      <p>hello@nestlya.com</p>
+                      <p>hello@nestlyadigital.com</p>
                     </div>
                   </div>
 
@@ -155,7 +155,7 @@ export default function ContactPage() {
                     <Phone className="text-lime-400" />
                     <div>
                       <p className="text-sm text-slate-400">Phone</p>
-                      <p>+1 (000) 000-0000</p>
+                      <p>+1 2135926001</p>
                     </div>
                   </div>
 
@@ -163,7 +163,8 @@ export default function ContactPage() {
                     <MapPin className="text-lime-400" />
                     <div>
                       <p className="text-sm text-slate-400">Location</p>
-                      <p>United States</p>
+                      <p>1209 Mountain Road Pl NE Ste 6960,
+Albuquerque, NM 87110</p>
                     </div>
                   </div>
                 </div>

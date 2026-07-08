@@ -63,6 +63,8 @@ export default function AboutPage() {
         </div>
       </section>
 
+
+
       {/* Story */}
       <section className="bg-[#F8FAFC] py-24">
         <div className="mx-auto max-w-7xl px-6">
@@ -124,6 +126,43 @@ export default function AboutPage() {
         </div>
       </section>
 
+<section className="bg-white py-24">
+  <div className="mx-auto max-w-7xl px-6">
+    <div className="mb-16 text-center">
+      <p className="mb-4 text-sm font-bold uppercase tracking-wider text-lime-500">
+        Our Process
+      </p>
+
+      <h2 className="text-4xl font-bold text-slate-950 md:text-5xl">
+        How We Work
+      </h2>
+    </div>
+
+    <div className="grid gap-6 md:grid-cols-5">
+      {[
+        "Discovery",
+        "Strategy",
+        "Design",
+        "Development",
+        "Growth",
+      ].map((step, index) => (
+        <div
+          key={step}
+          className="rounded-[28px] border border-slate-200 bg-white p-8 text-center"
+        >
+          <div className="mb-4 text-5xl font-bold text-lime-500">
+            0{index + 1}
+          </div>
+
+          <h3 className="font-semibold text-slate-950">
+            {step}
+          </h3>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
+
       {/* Values */}
       <section className="bg-[#F8FAFC] py-24">
         <div className="mx-auto max-w-7xl px-6">
@@ -163,6 +202,28 @@ export default function AboutPage() {
           </div>
         </div>
       </section>
+
+<section className="bg-slate-950 py-24">
+  <div className="mx-auto max-w-5xl px-6">
+    <div className="text-center">
+      <p className="text-2xl font-medium leading-relaxed text-white">
+        "Nestlya delivers premium digital solutions
+        with a strong focus on business growth,
+        performance and long-term success."
+      </p>
+
+      <div className="mt-8">
+        <p className="font-semibold text-white">
+          Client Feedback
+        </p>
+
+        <p className="text-slate-400">
+          Business Partner
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
 
       {/* Why Businesses Choose Nestlya */}
       <section className="bg-white py-24">
