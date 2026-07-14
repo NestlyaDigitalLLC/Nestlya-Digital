@@ -162,9 +162,17 @@ export default function ContactPage() {
                   <div className="flex gap-4">
                     <MapPin className="text-lime-400" />
                     <div>
-                      <p className="text-sm text-slate-400">Location</p>
+                      <p className="text-sm text-slate-400">US Registered Office</p>
                       <p>1209 Mountain Road Pl NE Ste 6960,
 Albuquerque, NM 87110</p>
+                    </div>
+                  </div>
+                                    <div className="flex gap-4">
+                    <MapPin className="text-lime-400" />
+                    <div>
+                      <p className="text-sm text-slate-400">Bangladesh Operations Office</p>
+                      <p>House 10, Road 6, Block B
+Banasree, Rampura, Dhaka 1219, Bangladesh</p>
                     </div>
                   </div>
                 </div>
